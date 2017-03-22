@@ -51,6 +51,7 @@ public class Brillio {
 		String input = "apple";
 				String output =""+input.charAt(input.length()-1 )+" "+input.charAt(input.length()-2); 
 				System.out.println(output);
+		
 				*/
 		
 		int[] numbers = {2,1,2,3,3,5};
@@ -76,4 +77,4 @@ public class Brillio {
 		
 	}
 }
-
+//Test comment
