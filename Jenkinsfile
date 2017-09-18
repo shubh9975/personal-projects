@@ -13,13 +13,14 @@ pipeline {
         timestamps()
     }
     tools {
-        //maven 'linux-maven-3.3.9'
+        maven 'linux-maven-3.3.9'
         jdk 'JDK-1.8'
     }
     stages {
         stage('Compile') {
             steps {
                 sh "echo hi"
+				sh "mvn install"
             }
         }
         
