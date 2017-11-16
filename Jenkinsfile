@@ -27,7 +27,7 @@ pipeline {
     }
     post {
         always{
-            step([$class: 'WsCleanup'])
+            cleanWorkspace()
         }
         success {
             emailext attachLog: true,
