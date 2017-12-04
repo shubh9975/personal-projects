@@ -20,7 +20,7 @@ pipeline {
         stage('Compile') {
             steps {
                 sh "echo hi"
-				sh "mvn install"
+		sh "mvn install"
             }
         }
         
