@@ -14,7 +14,7 @@ pipeline {
     }
     tools {
         maven 'maven-3.5.3'
-        jdk 'JDK-1.8'
+        jdk 'JDK-1.8-new'
     }
     stages {
         stage('Compile') {
