@@ -13,7 +13,7 @@ pipeline {
         timestamps()
     }
     tools {
-        maven 'linux-maven-3.3.9'
+        maven 'maven-3.5.3'
         jdk 'JDK-1.8'
     }
     stages {
