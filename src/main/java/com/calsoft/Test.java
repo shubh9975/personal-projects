@@ -104,6 +104,7 @@ public class Test {
 	{
 		//String[] input = New String {"",""};
 		//show({6,5},{"x","x"});
+		System.out.println("Hello");
 	}
 }
 //Added extra comment
