@@ -1,10 +1,13 @@
 pipeline {
+    /*
     agent {
         node{
             label 'NBU'
             customWorkspace "workspace/${env.JOB_NAME}"
             }
     }
+    */
+    agent any	
     environment {
         GITHUB_TOKEN = credentials('afdcc8c7-083e-4836-b577-3a24ceaca338')
     }
@@ -13,7 +16,7 @@ pipeline {
         timestamps()
     }
     tools {
-        maven 'maven-3.5.3'
+        maven 'maven-3.8.3'
         jdk 'JDK-1.8-new'
     }
     stages {
