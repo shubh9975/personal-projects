@@ -30,7 +30,7 @@ pipeline {
     }
     post {
         always{
-            cleanWorkspace()
+            //cleanWorkspace()
         }
         success {
             emailext attachLog: true,
