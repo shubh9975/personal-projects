@@ -31,7 +31,7 @@ pipeline {
     post {
         always{
             //cleanWorkspace()
-	    sh "echo hi"	
+	    print "hi"	
         }
         success {
             emailext attachLog: true,
