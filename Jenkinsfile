@@ -9,7 +9,8 @@ pipeline {
     */
     agent any	
     environment {
-        GITHUB_TOKEN = credentials('afdcc8c7-083e-4836-b577-3a24ceaca338')
+        //GITHUB_TOKEN = credentials('afdcc8c7-083e-4836-b577-3a24ceaca338')
+	GITHUB_TOKEN = credentials('nilart-github')    
     }
     options {
         buildDiscarder(logRotator(artifactDaysToKeepStr: '30', artifactNumToKeepStr: '5', daysToKeepStr: '30', numToKeepStr: '5'))
