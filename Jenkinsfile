@@ -16,7 +16,7 @@ pipeline {
         timestamps()
     }
     tools {
-        maven 'maven-3.5.3'
+        maven 'maven-3.8.5-auto'
         //jdk 'JDK-1.8-new'
     }
     stages {
