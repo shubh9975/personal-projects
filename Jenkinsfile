@@ -26,6 +26,9 @@ pipeline {
                 sh "echo hi"
 		sh "mvn install"
             }
+	    steps {
+                sh "mvn build"
+            }
         }
         
     }
