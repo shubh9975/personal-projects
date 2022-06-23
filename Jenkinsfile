@@ -30,7 +30,8 @@ pipeline {
     
     stage('docker image'){
            steps {
-             sh "docker build -t personal-projects:${BUILD_NUMBER} ."
+             	sh "id"	
+		sh "docker build -t personal-projects:${BUILD_NUMBER} ."
            }
 	 }	    
         
