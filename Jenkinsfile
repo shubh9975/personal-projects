@@ -28,13 +28,21 @@ pipeline {
             }
         }
     
-    stage('docker image'){
+    stage('Build docker image'){
            steps {
              	sh "id"	
 		sh "docker build -t personal-projects:${BUILD_NUMBER} ."
            }
 	 }	    
-        
+    
+    stage('Docker login and push') {
+            steps {
+              //withCredentials([string(credentialsId: 'DockerHubPwd', variable: 'DockerHubPwd')]) {
+                //sh "docker login -u prasadve0506 -p ${DockerHubPwd}"
+		sh "docker push  personal-projects:${BUILD_NUMBER}"
+              }
+            
+            }  
     }
     post {
         always{
