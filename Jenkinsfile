@@ -31,7 +31,7 @@ pipeline {
     stage('Build docker image'){
            steps {
              	sh "id"	
-		sh "docker build -t personal-projects:${BUILD_NUMBER} ."
+		sh "docker build -t nilart/personal-projects:${BUILD_NUMBER} ."
            }
 	 }	    
     
