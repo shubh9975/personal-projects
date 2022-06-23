@@ -39,7 +39,7 @@ pipeline {
             steps {
               withCredentials([string(credentialsId: 'DockerHubPwd', variable: 'DockerHubPwd')]) {
                 sh "docker login -u nilart -p ${DockerHubPwd}"
-		sh "docker push  personal-projects:${BUILD_NUMBER}"
+		sh "docker push  nilart/personal-projects:${BUILD_NUMBER}"
               }
             
             }  
