@@ -28,6 +28,14 @@ pipeline {
             }
         }
     
+    
+    stage('Sonar Scan placeholder'){
+           steps {
+             	sh "echo 'sonar scan'"	
+		
+           }
+	 }	    
+
     stage('Build docker image'){
            steps {
              	sh "id"	
