@@ -52,16 +52,6 @@ pipeline{
 }
 }
 }    
-    
-  stage("Sonar Scan placeholder"){
-     steps{
-      script{
-        sh '''
-           mvn sonar:sonar
-      '''
-} 
-}
-} 
 
    stage("Image Building"){
      steps{
