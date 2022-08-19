@@ -98,5 +98,15 @@ stage("Delete Image From Local"){
 }
 }    
     
+ stage ('Invoke_CD_pipeline') {
+     steps {
+                //build job: 'microservice01-cd', parameters: [string(name: 'GIT_BRANCH_NAME', value: env.BRANCH_NAME)]
+            build job: 'CD', propagate: false, wait: false, parameters: [[$class: 'StringParameterValue', name: 'BRANCH_NAME', value: "main"]]
+            }
+        }
+
+}
+    
+    
 }
 }
