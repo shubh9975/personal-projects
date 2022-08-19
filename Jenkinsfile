@@ -35,7 +35,7 @@ pipeline{
       script{
 
        sh '''
-           echo "Formatting the Java Code JSon Lint"
+           echo "Formatting the Java Code "
            echo "Linting the Java Code"
       '''
 
@@ -53,16 +53,7 @@ pipeline{
 }
 }    
     
-   stage("Sonar Scan placeholder"){
-     steps{
-      script{
 
-       sh '''
-           mvn sonar:sonar
-      '''
-} 
-}
-}
 
    stage("Image Building"){
      steps{
@@ -75,15 +66,6 @@ pipeline{
 }
 }    
     
-   stage("Image scanning"){
-     steps{
-      script{
-       sh '''
-           echo "Sonar scanning"
-       '''
-}
-}
-}
 
    stage("Docker Login"){
      steps{
