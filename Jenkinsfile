@@ -56,17 +56,7 @@ pipeline {
                 sh "ansible-playbook deployment/tests/test.yml"
 	   }  
          } 
-	    
-   stage("Delete Image From Local"){
-     steps{
-      script{
-       sh '''
-           docker rmi -f cto
-       '''
-       }
-      }
-    }    	    
- 
+	     	    
 }
     post {
         always{
