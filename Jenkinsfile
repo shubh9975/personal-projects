@@ -46,11 +46,9 @@ pipeline {
     
     stage('Docker login and push') {
             steps {
-              withCredentials([string(credentialsId: 'DockerHubPwd', variable: 'DockerHubPwd')]) {
                 sh "docker login --username shubh9975 --password c65b19fc-7e5c-4553-bf79-1e878a505365"
 		sh "docker push shubh9975/simple-app:v3.3.3}"
-              }
-            
+  
             }  
          }  
     stage('Depoly microservice via k8s yaml on k8s setup via ansible') {
