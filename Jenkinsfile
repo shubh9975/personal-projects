@@ -39,16 +39,23 @@ pipeline {
 
     stage('Build docker image'){
            steps {
-             	sh "id"	
-		sh "docker build -t nilart/personal-projects:${BUILD_NUMBER} ."
+            script{
+	      sh '''
+	           docker build -t cto .
+                   docker tag  cto shubh9975/simple-app:v3.3.3
+		'''
            }
 	 }	    
-    
+       }
     stage('Docker login and push') {
             steps {
-              withCredentials([string(credentialsId: 'DockerHubPwd', variable: 'DockerHubPwd')]) {
-                sh "docker login -u nilart -p ${DockerHubPwd}"
-		sh "docker push  nilart/personal-projects:${BUILD_NUMBER}"
+             script{
+	      sh '''
+	           docker login --username shubh9975 --password c65b19fc-7e5c-4553-bf79-1e878a505365
+                   docker push shubh9975/simple-app:v3.3.3
+
+		'''
+           }
               }
             
             }  
