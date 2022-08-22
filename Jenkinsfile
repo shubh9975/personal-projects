@@ -53,7 +53,7 @@ pipeline {
          }  
     stage('Depoly microservice via k8s yaml on k8s setup via ansible') {
             steps {
-                sh "ansible-playbook deployment/tests/test.yml"
+                sh "ansible-playbook deployment/tests/test.yml -vvv"
 	   }  
          } 
 	     	    
