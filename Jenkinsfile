@@ -58,24 +58,24 @@ pipeline {
          } 
 	     	    
 }
-    post {
-        always{
+    //post {
+        //always{
          //   cleanWorkspace()
-	    print "hi"	
-        }
-        success {
-            emailext attachLog: true,
-                body: 'Pipeline job ${JOB_NAME} success. Build URL: ${BUILD_URL}',
-                recipientProviders: [[$class: 'CulpritsRecipientProvider']],
-                subject: 'SUCCESS: Jenkins Job- ${JOB_NAME} Build No- ${BUILD_NUMBER}',
-                to: 'nilesh.arte@calsoftinc.com'
-        }
-        failure {
-            emailext attachLog: true,
-                body: 'Pipeline job ${JOB_NAME} failed. Build URL: ${BUILD_URL}',
-                recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider'], [$class: 'FailingTestSuspectsRecipientProvider'], [$class: 'UpstreamComitterRecipientProvider']],
-                subject: 'FAILED: Jenkins Job- ${JOB_NAME} Build No- ${BUILD_NUMBER}',
-                to: 'nilesh.arte@calsoftinc.com'
-        }
-    }
-}
+	    //print "hi"	
+        //}
+        //success {
+            //emailext attachLog: true,
+                //body: 'Pipeline job ${JOB_NAME} success. Build URL: ${BUILD_URL}',
+                //recipientProviders: [[$class: 'CulpritsRecipientProvider']],
+                //subject: 'SUCCESS: Jenkins Job- ${JOB_NAME} Build No- ${BUILD_NUMBER}',
+                //to: 'nilesh.arte@calsoftinc.com'
+        //}
+        //failure {
+            //emailext attachLog: true,
+                //body: 'Pipeline job ${JOB_NAME} failed. Build URL: ${BUILD_URL}',
+                //recipientProviders: [[$class: 'CulpritsRecipientProvider'], [$class: 'DevelopersRecipientProvider'], [$class: 'FailingTestSuspectsRecipientProvider'], [$class: 'UpstreamComitterRecipientProvider']],
+                //subject: 'FAILED: Jenkins Job- ${JOB_NAME} Build No- ${BUILD_NUMBER}',
+                //to: 'nilesh.arte@calsoftinc.com'
+        //}
+    //}
+//}
