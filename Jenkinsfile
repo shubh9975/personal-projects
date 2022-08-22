@@ -60,8 +60,10 @@ pipeline {
 }
 }	    
 }	    
-	
-	
+
+	    
+}
+}	
     post {
         always{
             cleanWorkspace()
