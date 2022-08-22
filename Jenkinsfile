@@ -24,7 +24,7 @@ pipeline {
     stages {
         stage('Compile') {
             steps {
-                sh "echo hi"
+                sh "echo hii"
 		sh "mvn install"
             }
         }
