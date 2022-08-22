@@ -32,7 +32,8 @@ pipeline {
     
     stage('Sonar Scan placeholder'){
            steps {
-             	sh "mvn sonar:sonar"
+             	//sh "mvn sonar:sonar"
+		   sh "echo sonar"
 		
            }
 	 }	    
@@ -53,12 +54,10 @@ pipeline {
          }  
     stage('Depoly microservice via k8s yaml on k8s setup via ansible') {
             steps {
-              withCredentials([string(credentialsId: 'DockerHubPwd', variable: 'DockerHubPwd')]) {
                 sh "ansible-playbook deployment/tests/test.yml"
-		
-              }
-            }  
-         }    
+	   }  
+         } 
+	    
    stage("Delete Image From Local"){
      steps{
       script{
