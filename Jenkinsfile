@@ -62,15 +62,15 @@ pipeline {
 }	    
     stage('Depoly microservice via k8s yaml on k8s setup via ansible') {
             steps {
-              withCredentials([string(credentialsId: 'DockerHubPwd', variable: 'DockerHubPwd')]) {
-                sh "echo use_ansibleplaybook_to_deploy_simple_pod_servie_depolyment_yml"
+                sh "ansible-playbook deployment/tests/test.ym"
 		
               }
             
             }  
          }    
 	    
-    }
+    }	
+	
     post {
         always{
             cleanWorkspace()
