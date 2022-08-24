@@ -3,9 +3,6 @@
 - name: Deployment on kubernetes cluster
   shell: kubectl create -f demo.yaml
 
-- name: Deployment on kubernetes cluster
-  shell: kubectl create -f demo1.yaml
-  #tags: deploy
 
   #- name: Deployment remove from  kubernetes cluster
   #shell: kubectl delete -f demo.yaml
