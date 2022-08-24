@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: calsoft-deployment
+    name: calsoft-deployment0
     #namespace: calsoft
 spec:
     replicas: 5
