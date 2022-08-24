@@ -1,9 +1,10 @@
 ---
 # tasks file for deployment
 - name: Deployment on kubernetes cluster
-  shell: | 
-  kubectl create -f demo.yaml
-  kubectl create -f demo1.yaml
+  shell: kubectl create -f demo.yaml
+
+- name: Deployment on kubernetes cluster
+  shell: kubectl create -f demo1.yaml
   #tags: deploy
 
   #- name: Deployment remove from  kubernetes cluster
