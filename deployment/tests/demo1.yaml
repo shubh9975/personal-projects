@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: calsoft-deployment1
+    #namespace: calsoft
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            env: prod
+    template:
+        metadata:
+            labels:
+                env: prod
+        spec:
+            containers:
+                - name: cloud
+                  image: shubh9975/personal-project:v3.3.3
+                 
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: cloud-service
+    #namespace: calsoft
+spec:
+    type: NodePort
+    ports:
+        - port: 80
+          nodePort: 31500
+    selector:
+        env: prod
