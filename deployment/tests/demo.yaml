@@ -64,4 +64,3 @@ spec:
           nodePort: 31500
     selector:
         env: test1
----
