@@ -15,7 +15,7 @@ spec:
         spec:
             containers:
                 - name: calsoft
-                  image: shubh9975/personal-project:v3
+                  image: shubh9975/simple-app:simple-app
                  
 ---
 apiVersion: v1
@@ -49,7 +49,7 @@ spec:
         spec:
             containers:
                 - name: calsoft1
-                  image: shubh9975/personal-project:v3.3.3
+                  image: shubh9975/personal-project:personal-project
                  
 ---
 apiVersion: v1
