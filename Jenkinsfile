@@ -38,8 +38,8 @@ pipeline {
 
     stage('Build docker image'){
            steps {
-                sh " docker build -t cto ."
-                sh "docker tag  cto shubh9975/personal-project:personal-project"
+                sh " docker build -t personalproject ."
+                sh "docker tag  personalproject shubh9975/personal-project:personal-project"
            }
          }
 
