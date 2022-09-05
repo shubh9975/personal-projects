@@ -39,14 +39,14 @@ pipeline {
     stage('Build docker image'){
            steps {
                 sh " docker build -t personalproject ."
-                sh "docker tag  personalproject shubh9975/personal-project:personal-project"
+                sh "docker tag  personalproject shubh9975/personal-project:v6.6.6"
            }
          }
 
     stage('Docker login and push') {
             steps {
                 sh "docker login --username shubh9975 --password c65b19fc-7e5c-4553-bf79-1e878a505365"
-                sh "docker push shubh9975/personal-project:personal-project"
+                sh "docker push shubh9975/personal-project:v6.6.6"
 
             }
          }
