@@ -1,4 +1,3 @@
-@Library('shared_library') _
 pipeline {
     /*
     agent {
@@ -8,10 +7,10 @@ pipeline {
             }
     }
     */
-    agent any	
+    agent any
     environment {
         //GITHUB_TOKEN = credentials('afdcc8c7-083e-4836-b577-3a24ceaca338')
-	GITHUB_TOKEN = credentials('nilart-github')    
+        GITHUB_TOKEN = credentials('nilart-github')
     }
     options {
         buildDiscarder(logRotator(artifactDaysToKeepStr: '30', artifactNumToKeepStr: '5', daysToKeepStr: '30', numToKeepStr: '5'))
@@ -19,49 +18,49 @@ pipeline {
     }
     tools {
         maven 'maven-3.8.5-auto'
-	jdk 'jdk11'    
+        jdk 'jdk11'
     }
     stages {
         stage('Compile') {
             steps {
                 sh "echo hii"
-		sh "mvn install"
+                sh "mvn install"
             }
         }
-    
-    
+
+
     stage('Sonar Scan placeholder'){
            steps {
-             	sh "mvn sonar:sonar"
-		
+                sh "mvn sonar:sonar"
+
            }
-	 }	    
+         }
 
     stage('Build docker image'){
            steps {
-             	sh " docker build -t cto ."	
-		sh "docker tag  cto shubh9975/personal-project:personal-project"
+                sh " docker build -t cto ."
+                sh "docker tag  cto shubh9975/personal-project:personal-project"
            }
-	 }	    
-    
+         }
+
     stage('Docker login and push') {
             steps {
                 sh "docker login --username shubh9975 --password c65b19fc-7e5c-4553-bf79-1e878a505365"
-		sh "docker push shubh9975/personal-project:personal-project"
-  
-            }  
-         }  
+                sh "docker push shubh9975/personal-project:personal-project"
+
+            }
+         }
     stage('Depoly microservice via k8s yaml on k8s setup via ansible') {
             steps {
                 sh "ansible-playbook deployment/tests/test.yml -vvv"
-	   }  
-         } 
-	     	    
+           }
+         }
+
 }
     //post {
         //always{
          //   cleanWorkspace()
-	    //print "hi"	
+            //print "hi"
         //}
         //success {
             //emailext attachLog: true,
