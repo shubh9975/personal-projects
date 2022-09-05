@@ -49,7 +49,7 @@ spec:
         spec:
             containers:
                 - name: calsoft1
-                  image: shubh9975/personal-project:v6.6.6
+                  image: shubh9975/personal-project:v4.4.4
                  
 ---
 apiVersion: v1
