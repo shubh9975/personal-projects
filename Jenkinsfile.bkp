@@ -96,5 +96,6 @@ stage("Delete Image From Local"){
 }
 }    
     
+    
 }
 }
