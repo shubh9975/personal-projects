@@ -55,8 +55,22 @@ pipeline {
                 sh "ansible-playbook deployment/tests/test.yml -vvv"
            }
          }
-
+    post
+     {
+         failure 
+         {
+             slackSend message:"Build failed  - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+         }
+         success {
+             slackSend message:"Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
+         }
+     }
 }
+    
+    
+    
+    
+    
     //post {
         //always{
          //   cleanWorkspace()
