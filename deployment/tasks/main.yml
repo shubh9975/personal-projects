@@ -1,9 +1,10 @@
 ---
+- name: Deployment remove from  kubernetes cluster
+  shell: kubectl delete -f demo.yaml
+  #tags: delete_deploy
+
 # tasks file for deployment
 - name: Deployment on kubernetes cluster
-  shell: kubectl create -f demo.yaml
+  shell: kubectl apply -f demo.yaml
 
 
-  #- name: Deployment remove from  kubernetes cluster
-  #shell: kubectl delete -f demo.yaml
-  #tags: delete_deploy
