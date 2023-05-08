@@ -24,7 +24,7 @@ pipeline {
         stage('Compile') {
             steps {
                 sh "echo hii"
-                sh 'cd /home/ec2-user && curl -X GET -H "Authorization: Bearer "$(gcloud auth application-default print-access-token)   "https://artifactregistry.googleapis.com/v1/projects/cloud-aoss/locations/us/repositories/cloud-aoss-java/mavenArtifacts"'
+                sh 'cd $HOME && export GOOGLE_APPLICATION_CREDENTIALS=$HOME/helical-math-347004-566b368f2e06.json && curl -X GET -H "Authorization: Bearer "$(gcloud auth application-default print-access-token)   "https://artifactregistry.googleapis.com/v1/projects/cloud-aoss/locations/us/repositories/cloud-aoss-java/mavenArtifacts"'
                 //sh "export GOOGLE_APPLICATION_CREDENTIALS=$HOME/helical-math-347004-566b368f2e06.json && mvn install"
             }
         }
