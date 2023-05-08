@@ -24,7 +24,10 @@ pipeline {
         stage('Compile') {
             steps {
                 sh "echo hii"
-                sh "export GOOGLE_APPLICATION_CREDENTIALS=$HOME/helical-math-347004-566b368f2e06.json && mvn install"
+                sh "cd $HOME"
+                sh "$PWD"
+                sh 'curl -X GET -H "Authorization: Bearer "$(gcloud auth application-default print-access-token)   "https://artifactregistry.googleapis.com/v1/projects/cloud-aoss/locations/us/repositories/cloud-aoss-java/mavenArtifacts"'
+                //sh "export GOOGLE_APPLICATION_CREDENTIALS=$HOME/helical-math-347004-566b368f2e06.json && mvn install"
             }
         }
 
