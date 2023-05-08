@@ -11,7 +11,6 @@ pipeline {
     environment {
         //GITHUB_TOKEN = credentials('afdcc8c7-083e-4836-b577-3a24ceaca338')
         GITHUB_TOKEN = credentials('nilart-github')
-        GOOGLE_APPLICATION_CREDENTIALS=$HOME/helical-math-347004-566b368f2e06.json
     }
     options {
         buildDiscarder(logRotator(artifactDaysToKeepStr: '30', artifactNumToKeepStr: '5', daysToKeepStr: '30', numToKeepStr: '5'))
@@ -25,7 +24,7 @@ pipeline {
         stage('Compile') {
             steps {
                 sh "echo hii"
-                sh "mvn install"
+                sh "export GOOGLE_APPLICATION_CREDENTIALS=$HOME/helical-math-347004-566b368f2e06.json && mvn install"
             }
         }
 
