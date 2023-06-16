@@ -1,8 +1,12 @@
 package com.calsoft;
 
-import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
+//import org.junit.Test;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
 public class AppTest {
     @Test
