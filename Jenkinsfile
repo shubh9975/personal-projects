@@ -31,7 +31,7 @@ pipeline {
 
     stage('Sonar Scan placeholder'){
            steps {
-                sh "mvn sonar:sonar"
+                sh "mvn verify sonar:sonar"
 
            }
          }
