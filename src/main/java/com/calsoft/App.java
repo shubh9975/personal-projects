@@ -1,17 +1,17 @@
 package com.calsoft;
 
-/**
- * Hello world!
- *
- */
-public class App
-{
-    public static void main( String[] args )
-    {
-      while (true) {
-        System.out.println( "Hello World!" );
-        //added changes to test scm build fire 2
-        //testing webhooks3
-      }
+public class App {
+    private final String message;
+
+    public App() {
+        this.message = "Hello World!";
+    }
+
+    public String getMessage() {
+        return this.message;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new App().getMessage());
     }
 }
