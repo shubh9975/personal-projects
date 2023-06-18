@@ -37,6 +37,6 @@ public class AppTest {
         int sound_system_clarity_frequency = app.getSoundSystemClarityByFreqency();
         boolean is_sound_system_clarity_decent = false;
         if (sound_system_clarity_frequency > 50) is_sound_system_clarity_decent = true;
-        assertEquals("Sound system clarity is: " + sound_system_clarity, is_sound_system_clarity_decent, true);
+        assertEquals("Sound system clarity is: " + sound_system_clarity_frequency, is_sound_system_clarity_decent, true);
     }
 }

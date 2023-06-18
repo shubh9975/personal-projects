@@ -25,6 +25,12 @@ public class App {
         return randomNumber;
     }
 
+    public int getSoundSystemClarityByFreqency() {
+        Random random = new Random();
+        int randomNumber = random.nextInt(100) + 1;
+        return randomNumber;
+    }
+
     public static void main(String[] args) {
         System.out.println(new App().getMessage());
     }
