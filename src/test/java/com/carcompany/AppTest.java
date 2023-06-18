@@ -1,4 +1,4 @@
-package com.calsoft;
+package com.carcompany;
 
 import static org.junit.Assert.assertEquals;
 
