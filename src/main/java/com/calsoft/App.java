@@ -16,13 +16,15 @@ public class App {
     public int getPickupTimeInSec() {
         Random random = new Random();
         int randomNumber = random.nextInt(20) + 1;
-        return randomNumber;
+        //return randomNumber;
+        return 9
     }
 
     public int getCoolingTimeInMin() {
         Random random = new Random();
         int randomNumber = random.nextInt(10) + 1;
-        return randomNumber;
+        //return randomNumber;
+        return 4;
     }
 
     public int getSoundSystemClarityByFreqency() {
