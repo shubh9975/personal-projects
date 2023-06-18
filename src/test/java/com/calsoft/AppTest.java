@@ -14,8 +14,8 @@ public class AppTest {
     @Test
     public void getPickupTimeInSec() {
         App app = new App();
-        pickup_time = app.getPickupTimeInSec();
-        is_pickup_decent = false;
+        int pickup_time = app.getPickupTimeInSec();
+        boolean is_pickup_decent = false;
         if (pickup_time > 10) is_pickup_decent = true;
         assertEquals("Picup time is: " + pickup_time, is_pickup_decent, true);
     }
