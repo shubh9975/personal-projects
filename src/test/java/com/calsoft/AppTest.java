@@ -17,6 +17,6 @@ public class AppTest {
         pickup_time = app.getPickupTimeInSec();
         is_pickup_decent = false;
         if (pickup_time > 10) is_pickup_decent = true;
-        assertEquals("Default message is valid", app.getPickupTimeInSec(), "Hello World!");
+        assertEquals("Picup time is: " + pickup_time, is_pickup_decent, true);
     }
 }
