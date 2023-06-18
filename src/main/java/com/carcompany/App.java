@@ -1,4 +1,4 @@
-package com.calsoft;
+package com.carcompany;
 import java.util.Random;
 
 
@@ -17,7 +17,7 @@ public class App {
         Random random = new Random();
         int randomNumber = random.nextInt(20) + 1;
         //return randomNumber;
-        return 9
+        return 9;
     }
 
     public int getCoolingTimeInMin() {
