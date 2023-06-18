@@ -24,7 +24,7 @@ pipeline {
         stage('Compile') {
             steps {
                 sh "echo hii"
-                sh "mvn install"
+                sh "mvn clean nstall"
             }
         }
 
