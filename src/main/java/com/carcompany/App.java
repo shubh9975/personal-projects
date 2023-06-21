@@ -17,12 +17,13 @@ public class App {
         Random random = new Random();
         int randomNumber = random.nextInt(20) + 1;
         //return randomNumber;
-        return 9;
+        //return 9;
+        return 11;
     }
 
     public int getCoolingTimeInMin() {
         Random random = new Random();
-        int randomNumber = random.nextInt(10) + 1;
+        int randomNumber = random.nextInt(15) + 1;
         //return randomNumber;
         return 4;
     }

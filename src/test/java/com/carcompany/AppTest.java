@@ -39,4 +39,18 @@ public class AppTest {
         if (sound_system_clarity_frequency > 50) is_sound_system_clarity_decent = true;
         assertEquals("Sound system clarity is: " + sound_system_clarity_frequency, is_sound_system_clarity_decent, true);
     }
+
+    /* Testcase for getPickupTimeInSec method which will return: 
+    bad if number is greater than 10, decent if number is between 5 to 10, good if number is less than 5 */
+    @Test
+    public void getPickupTimeInSecTest() {
+        App app = new App();
+        int pickup_time = app.getPickupTimeInSec();
+        String pickup_time_result = "";
+        if (pickup_time > 10) pickup_time_result = "bad";
+        else if (pickup_time > 5 && pickup_time <= 10) pickup_time_result = "decent";
+        else if (pickup_time <= 5) pickup_time_result = "good";
+        assertEquals("Pickup time is: " + pickup_time, pickup_time_result, "good");
+    }
+    
 }
