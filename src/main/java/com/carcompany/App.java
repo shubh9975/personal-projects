@@ -17,8 +17,8 @@ public class App {
         Random random = new Random();
         int randomNumber = random.nextInt(20) + 1;
         //return randomNumber;
-        //return 9;
-        return 11;
+        return 9;
+        //return 11;
     }
 
     public int getCoolingTimeInMin() {
