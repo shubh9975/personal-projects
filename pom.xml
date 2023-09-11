@@ -10,7 +10,8 @@
   <properties> 
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <sonar.host.url>http://52.22.18.27:9000/</sonar.host.url>
+    <!-- sonar.host.url>http://52.22.18.27:9000/</sonar.host.url -->
+    <sonar.host.url>http://20.80.97.16:9000/</sonar.host.url>
     <sonar.login>admin</sonar.login>
     <sonar.password>admin</sonar.password>
     <!-- JaCoCo Properties -->
