@@ -29,12 +29,12 @@ pipeline {
         }
 
 
-    stage('Sonar Scan placeholder'){
-           steps {
-                sh "mvn verify sonar:sonar"
+    // stage('Sonar Scan placeholder'){
+    //        steps {
+    //             sh "mvn verify sonar:sonar"
 
-           }
-         }
+    //        }
+    //      }
 
     stage('Build docker image'){
            steps {
