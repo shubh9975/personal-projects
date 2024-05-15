@@ -45,7 +45,7 @@ pipeline {
 
     stage('Docker login and push') {
             steps {
-                sh "docker login --username shubh9975 --password c65b19fc-7e5c-4553-bf79-1e878a505365"
+                sh "docker login --username shubh9975 --password $DOCKERHUB_TOKEN"
                 sh "docker push shubh9975/personal-project:v6.6.6"
 
             }
