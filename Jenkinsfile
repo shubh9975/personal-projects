@@ -29,12 +29,13 @@ pipeline {
         }
 
 
-    // stage('Sonar Scan placeholder'){
-    //        steps {
+    stage('Sonar Scan placeholder'){
+           steps {
     //             sh "mvn verify sonar:sonar"
+                   echo "Sonar Scan"
 
-    //        }
-    //      }
+            }
+         }
 
     stage('Build docker image'){
            steps {
@@ -52,6 +53,7 @@ pipeline {
          }
     stage('Depoly microservice via k8s yaml on k8s setup via ansible') {
             steps {
+                sh "kubectl delete -f deployment/tests/demo.yaml"
                 sh "ansible-playbook deployment/tests/test.yml -vvv"
            }
          }
