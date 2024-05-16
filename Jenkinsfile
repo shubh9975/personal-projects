@@ -53,7 +53,7 @@ pipeline {
          }
     stage('Depoly microservice via k8s yaml on k8s setup via ansible') {
             steps {
-                sh "kubectl delete -f deployment/tests/demo.yaml"
+                sh "kubectl delete -f deployment/tests/demo.yaml || true"
                 sh "ansible-playbook deployment/tests/test.yml -vvv"
            }
          }
